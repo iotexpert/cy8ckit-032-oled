@@ -12,7 +12,7 @@ echo "https://github.com/cypresssemiconductorco/emwin/#release-v5.48.1" > emwin.
 echo "https://github.com/iotexpert/p6sdk-ssd1306-emWin-config/#master" > p6sdk-ssd1306-emWin-config.lib
 make getlibs
 ```
-# Adding to your project with Library Manager
+# Adding to your project with the Library Manager
 If you are using the IoT Expert manifest this will show up in the library manager under the IoT Expert middleware.
 ![Exmaple Code Results](https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/libraryManager.png)
 
