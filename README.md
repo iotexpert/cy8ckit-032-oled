@@ -6,8 +6,9 @@ These configuration files use the PSoC 6 SDK HAL to setup an I2C and write to th
 These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.
 
 # Adding to your project manually
-You can add this to your project by
+You can add emWin and these drivers to your project by
 ```
+echo "https://github.com/cypresssemiconductorco/emwin/#release-v5.48.1" > emwin.lib
 echo "https://github.com/iotexpert/p6sdk-ssd1306-emWin-config/#master" > p6sdk-ssd1306-emWin-config.lib
 make getlibs
 ```
@@ -17,7 +18,6 @@ If you are using the IoT Expert manifest this will show up in the library manage
 
 ## Example Code
 This code will initailize the BSP, then display "Hello World" in the middle.
-https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/libraryManager.png
 ```
 #include "cybsp.h"
 #include "GUI.h"
