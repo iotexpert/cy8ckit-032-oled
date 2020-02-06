@@ -3,6 +3,9 @@ This repository contains all of the emWin configuration files plus driver setup 
 
 These configuration files use the PSoC 6 SDK HAL to setup an I2C and write to the display.
 
+## Example Code
+This code will initailize the BSP, then display "Hello World" in the middle.
+
 ```
 #include "cybsp.h"
 #include "GUI.h"
@@ -21,3 +24,5 @@ int main(void)
 }
 
 ```
+
+![Image description](link-to-image)
