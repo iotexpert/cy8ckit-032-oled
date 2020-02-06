@@ -1,5 +1,5 @@
 # SSD1306 - emWin - PSoC 6 SDK Configuration Files
-This repository contains all of the emWin configuration files plus driver setup for the SSD1306 (driver chip) connected to the 128x64 OLED.  The SSD1306/OLED is the display that is attached to the CY8CKIT-032
+This repository contains all of the emWin configuration files plus driver setup for the SSD1306 (driver chip) connected to a 128x64 OLED.  The SSD1306/OLED is the display that is attached to the CY8CKIT-032
 
 These configuration files use the PSoC 6 SDK HAL to setup an I2C and write to the display.
 
