@@ -25,4 +25,4 @@ int main(void)
 
 ```
 
-![Exmaple Code Results]https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/IMG_1350.jpg
+![Exmaple Code Results](https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/IMG_1350.jpg)
