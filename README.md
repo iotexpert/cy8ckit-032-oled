@@ -1,11 +1,23 @@
 # SSD1306 - emWin - PSoC 6 SDK Configuration Files
-This repository contains all of the emWin configuration files plus driver setup for the SSD1306 (driver chip) connected to the 128x64 OLED.  The SSD1306/OLED is the display that is attached to the CY8CKIT-032
+This repository contains all of the emWin configuration files plus driver setup for the SSD1306 (driver chip) connected to a 128x64 OLED.  The SSD1306/OLED is the display that is attached to the CY8CKIT-032
 
 These configuration files use the PSoC 6 SDK HAL to setup an I2C and write to the display.
 
+These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.
+
+# Adding to your project manually
+You can add emWin and these drivers to your project by
+```
+echo "https://github.com/cypresssemiconductorco/emwin/#release-v5.48.1" > emwin.lib
+echo "https://github.com/iotexpert/p6sdk-ssd1306-emWin-config/#master" > p6sdk-ssd1306-emWin-config.lib
+make getlibs
+```
+# Adding to your project with the Library Manager
+If you are using the IoT Expert manifest this will show up in the library manager under the IoT Expert middleware.
+![Exmaple Code Results](https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/libraryManager.png)
+
 ## Example Code
 This code will initailize the BSP, then display "Hello World" in the middle.
-
 ```
 #include "cybsp.h"
 #include "GUI.h"
