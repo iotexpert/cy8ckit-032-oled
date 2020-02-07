@@ -31,14 +31,14 @@ SSD1306DriverInit(&I2C);
 
 These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.
 
-# Adding to your project manually
-You can add emWin and these drivers to your project by
+# Adding this Driver to your project manually
+You can add this driver plus emWin to your project by:
 ```
 echo "https://github.com/cypresssemiconductorco/emwin/#release-v5.48.1" > emwin.lib
 echo "https://github.com/iotexpert/p6sdk-ssd1306-emWin-config/#master" > p6sdk-ssd1306-emWin-config.lib
 make getlibs
 ```
-# Adding to your project with the Library Manager
+# Adding this Driver to your project with the Library Manager
 If you are using the IoT Expert manifest this will show up in the library manager under the IoT Expert middleware.
 ![Exmaple Code Results](https://raw.githubusercontent.com/iotexpert/p6sdk-ssd1306-emWin-config/master/libraryManager.png)
 
