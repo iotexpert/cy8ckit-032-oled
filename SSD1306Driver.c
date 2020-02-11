@@ -2,7 +2,7 @@
 #include "GUI.h"
 #include "cyhal.h"
 #include "cybsp.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 /*********************************************************************
 *
@@ -17,12 +17,15 @@ static cyhal_i2c_t *I2C=0;
 /* I2C slave address, Command and Data byte prefixes for the display controller */
 #define OLED_CONTROL_BYTE_CMD       (0x00)
 #define OLED_CONTROL_BYTE_DATA      (0x40)
-#define OLED_I2C_ADDRESS            (0x3C)
+static uint8_t OLED_I2C_ADDRESS     =    (0x3C);
 
-void SSD1306DriverInit(cyhal_i2c_t *obj)
+void SSD1306DriverInit(cyhal_i2c_t *obj,uint8_t oledAddress)
+
 {
 	CY_ASSERT(obj);
 	I2C=obj;
+	if(oledAddress)
+		OLED_I2C_ADDRESS = oledAddress;
 }
 
 /*******************************************************************************
