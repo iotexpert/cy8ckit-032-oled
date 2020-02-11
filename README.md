@@ -8,9 +8,9 @@ To use this driver you need to
 #include "SSD1306Driver.h"
 ```
 
-To use this driver you should setup an I2C interface using the Cypress HAL, then call "SSD1306DriverInit" with a pointer to the I2C to use.  The function prototype is:
+To use this driver you should setup an I2C interface using the Cypress HAL, then call "SSD1306DriverInit" with a pointer to the I2C to use and the I2C address of the screen.  If you pass a 0 then it will default to the 0x32 (which seems to be the most common address.  The function prototype is:
 ```
-void SSD1306DriverInit(cyhal_i2c_t *obj);
+void SSD1306DriverInit(cyhal_i2c_t *obj, uint8_t oledAddress);
 ```
 
 E.G:
@@ -21,12 +21,11 @@ cyhal_i2c_t I2C;
 /* Configuration to initialize the I2C block */
 static cyhal_i2c_cfg_t i2c_config = {
 	.is_slave = false,
-	.address = 0,
 	.frequencyhal_hz = 400000
 };
 cyhal_i2c_init(&I2C, CYBSP_I2C_SDA, CYBSP_I2C_SCL, NULL);
 cyhal_i2c_configure(&I2C, &i2c_config);
-SSD1306DriverInit(&I2C);
+SSD1306DriverInit(&I2C,0x32);
 ```
 
 These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.
@@ -59,13 +58,12 @@ int main(void)
 	/* Configuration to initialize the I2C block */
 	static cyhal_i2c_cfg_t i2c_config = {
 		.is_slave = false,
-		.address = 0,
 		.frequencyhal_hz = 400000
 	};
 	cyhal_i2c_init(&I2C, CYBSP_I2C_SDA, CYBSP_I2C_SCL, NULL);
 	cyhal_i2c_configure(&I2C, &i2c_config);
 
-	SSD1306DriverInit(&I2C);
+	SSD1306DriverInit(&I2C,0x3C);
 
 	GUI_Init();
 	GUI_SetColor(GUI_WHITE);
@@ -74,6 +72,7 @@ int main(void)
 	GUI_SetTextAlign(GUI_TA_CENTER);
 	GUI_DispStringAt("Hello World", GUI_GetScreenSizeX()/2,GUI_GetScreenSizeY()/2 - GUI_GetFontSizeY()/2);
 }
+
 
 ```
 
