@@ -28,7 +28,7 @@ cyhal_i2c_configure(&I2C, &i2c_config);
 SSD1306DriverInit(&I2C,0x32);
 ```
 
-These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.  Do not forget that in order to use the emWin library you need to add the correct component to your makefile.
+These files depend on emWin being part of your project.  You must add them either manually or by using the library manager.  Do not forget that in order to use the emWin and FreeRTOS (or whatever RTOS you are using) library you need to add the correct components to your Makefile.
 ```
 COMPONENTS=EMWIN_OSNTS FREERTOS
 ```
