@@ -13,7 +13,7 @@ To use this driver you should setup an I2C interface using the Cypress HAL, then
 void SSD1306DriverInit(cyhal_i2c_t *obj, uint8_t oledAddress);
 ```
 
-E.G:
+Example:
 
 ```
 cyhal_i2c_t I2C;
