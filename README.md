@@ -35,7 +35,7 @@ COMPONENTS=EMWIN_OSNTS FREERTOS
 
 
 # Adding this Driver to your project manually
-You can add this driver plus emWin to your project by:
+You can manually add this driver to your project by:
 ```
 echo "https://github.com/iotexpert/p6sdk-ssd1306-emwin-cyrtos-config/#master" > p6sdk-ssd1306-emwin-cyrtos-config.lib
 make getlibs
