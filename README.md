@@ -1,3 +1,6 @@
+# OBSOLETE
+This library has been rendered obsolete by the release by Cypress of the driver library display-oled-ssd1306.  In addition the library scheme that goes with this library has changed.... so don't use it.
+
 # SSD1306 - emWin - PSoC 6 SDK Configuration Files
 This repository contains all of the emWin configuration files plus driver setup for the SSD1306 (driver chip) connected to a 128x64 OLED.  The SSD1306/OLED is the display that is attached to the CY8CKIT-032
 
